@@ -1,1 +1,71 @@
 @import "tailwindcss";
+
+#onama {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.kartica {
+    border: 1px solid rgb(241, 235, 235);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 20px 10px 10px 10px;
+    box-shadow: 0 0 8px #cccccc;
+    flex: 1 1 300px;
+    max-width: 500px;
+}
+
+.kartica h3 {
+    color: rgb(20, 92, 50);
+    font-weight: 500;
+}
+
+.kartica h1 {
+    margin-top: 0;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.kartica img {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.linija {
+    width: 150px;
+    height: 3px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    background-color: #454a5a;
+    transform: scaleX(0.8);
+    transform-origin: center;
+    animation: povecaj 1s ease-out forwards;
+}
+
+@media (max-width: 768px) {
+    .linija {
+        width: 100px;
+        height: 3px;
+        animation: povecajMobilni 1s ease-out forwards;
+    }
+}
+
+@keyframes povecaj {
+    from { transform: scaleX(0.8); }
+    to { transform: scaleX(4); }
+}
+
+@keyframes povecajMobilni {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(2); }
+}
+
