@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom"
 import preSlika from "./assets/pre.jpeg";
 import posleSlika from "./assets/posle.jpeg";
 import slika1 from "./assets/slika1.jpeg";
@@ -75,14 +76,16 @@ function Galerija() {
             />
             <img
               src={slika4}
-              alt=""
+              alt="src\assets\galerijaspoljasnja.jpeg"
               className="w-full h-32 object-cover rounded-lg hover:scale-105 transition cursor-pointer"
             />
           </div>
 
-          <button className="bg-black text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition">
-            Pogledaj celu galeriju
-          </button>
+          <Link to="/fullgalerija">
+            <button className="bg-black text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition">
+              Pogledaj celu galeriju
+            </button>
+          </Link>
 
         </div>
       </div>

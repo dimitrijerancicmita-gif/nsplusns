@@ -1,21 +1,33 @@
-import { useState } from 'react'
+import { Routes, Route } from "react-router-dom";
+import Body from "./Body.jsx";
+import Galerija from "./Galerija.jsx";
+import Onama from "./Onama.jsx";
+import Fullgalerija from "./Fullgalerija.jsx";
 import Navigacija from './Navigacija.jsx'
-import Body from './Body.jsx'
-import Onama from './Onama.jsx'
-import Galerija from './Galerija.jsx'
-import Footer from './Footer.jsx'
 
 function App() {
-
   return (
-    <>
-      <Navigacija/>
-      <Body/>
-      <Galerija/>
-      <Onama/>
-      <Footer/>
-    </>
-  )
+    <Routes>
+      {/* Glavna stranica */}
+      <Route
+        path="/"
+        element={
+          <>
+            <Navigacija/>
+            <Body />
+            <Galerija />
+            <Onama />
+          </>
+        }
+      />
+
+      {/* Samo Fullgalerija, nova “stranica” */}
+      <Route
+        path="/fullgalerija"
+        element={<Fullgalerija />}
+      />
+    </Routes>
+  );
 }
 
-export default App
+export default App;
