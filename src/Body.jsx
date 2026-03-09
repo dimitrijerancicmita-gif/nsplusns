@@ -2,6 +2,8 @@ import molerajSlika from "./assets/molerajslika.jpeg";
 import drugaSlika from "./assets/druga.jpeg";
 import trecaSlika from "./assets/treca.jpeg";
 import cetvrtaSlika from "./assets/cetvrta.jpeg";
+import { Link } from "react-router-dom";
+
 
 function Body() {
   return (
@@ -9,11 +11,13 @@ function Body() {
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8">
 
         {/* KARTICA 1 */}
-        <div className="group bg-white rounded-3xl overflow-hidden shadow-sm 
+        <Link to="/fullgalerija#moleraj">
+        <div
+                        className="group bg-white rounded-3xl overflow-hidden shadow-sm 
                         hover:shadow-xl transform hover:scale-105 
                         transition duration-300">
 
-          <div className="relative overflow-hidden">
+          <div className className="relative overflow-hidden">
             <img
               src={molerajSlika}
               alt="Moleraj"
@@ -31,7 +35,6 @@ function Body() {
                 "
             />
 
-            {/* Overlay */}
             <div className="absolute inset-0 xl:bg-black/50 
                             group-hover:bg-black/0 
                             transition duration-500">
@@ -47,9 +50,10 @@ function Body() {
             </p>
           </div>
         </div>
+        </Link>
 
         {/* KARTICA 2 */}
-        <div className="group bg-white rounded-3xl overflow-hidden shadow-sm 
+        <div className="kartica" className="group bg-white rounded-3xl overflow-hidden shadow-sm 
                         hover:shadow-xl transform hover:scale-105 
                         transition duration-300">
 
@@ -89,7 +93,7 @@ function Body() {
         </div>
 
         {/* KARTICA 3 */}
-        <div className="group bg-white rounded-3xl overflow-hidden shadow-sm 
+        <div className="kartica" className="group bg-white rounded-3xl overflow-hidden shadow-sm 
                         hover:shadow-xl transform hover:scale-105 
                         transition duration-300">
 
@@ -129,7 +133,7 @@ function Body() {
         </div>
 
         {/* KARTICA 4 */}
-        <div className="group bg-white rounded-3xl overflow-hidden shadow-sm 
+        <div className="kartica" className="group bg-white rounded-3xl overflow-hidden shadow-sm 
                         hover:shadow-xl transform hover:scale-105 
                         transition duration-300">
 
@@ -170,6 +174,7 @@ function Body() {
 
       </div>
     </div>
+
   );
 }
 

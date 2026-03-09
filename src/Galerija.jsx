@@ -76,7 +76,7 @@ function Galerija() {
             />
             <img
               src={slika4}
-              alt="src\assets\galerijaspoljasnja.jpeg"
+              alt=""
               className="w-full h-32 object-cover rounded-lg hover:scale-105 transition cursor-pointer"
             />
           </div>

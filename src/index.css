@@ -1,3 +1,4 @@
+
 @import "tailwindcss";
 
 #onama {
@@ -54,14 +55,6 @@
     align-content: center;
 }
 
-@media (max-width: 768px) {
-    .linija {
-        width: 160px;
-        height: 3px;
-        animation: povecajMobilni 1s ease-out forwards;
-    }
-}
-
 @keyframes povecaj {
     from { transform: scaleX(0.8); }
     to { transform: scaleX(4); }
@@ -70,6 +63,14 @@
 @keyframes povecajMobilni {
     from { transform: scaleX(0); }
     to { transform: scaleX(2); }
+}
+
+@media (max-width: 768px) {
+    .linija {
+        width: 160px;
+        height: 3px;
+        animation: povecajMobilni 1s ease-out forwards;
+    }
 }
 
 .crna-sekcija{
@@ -91,7 +92,7 @@
 }
 
 .linijadva {
-    width: 150px;
+    width: 240px;
     height: 3px;
     margin-top: -10px;
     margin-bottom: 10px;
@@ -100,7 +101,7 @@
     transform-origin: left;
     animation: povecaj 1s ease-out forwards;
     display: flex;
-    justify-content: center;
+    justify-content: left;
     align-content: center;
 }
 
@@ -123,29 +124,29 @@
 }
 
 .linijatri {
-    width: 150px;
+    width: 220px;
     height: 3px;
     margin-top: -10px;
     margin-bottom: 10px;
     background-color: #454a5a;
     transform: scaleX(0.8);
-    transform-origin: center;
+    transform-origin: left;
     animation: povecaj 1s ease-out forwards;
-    margin-top: 740px;
-    margin-left: 125px;
+    margin-left: 395px;
 }
 
 @media (max-width: 768px) {
     .linijatri {
         width: 200px;
         height: 3px;
+        margin-left: 60px;
         animation: povecajMobilni 1s ease-out forwards;
     }
 }
 
 @keyframes povecaj {
     from { transform: scaleX(0.8); }
-    to { transform: scaleX(8); }
+    to { transform: scaleX(5); }
 }
 
 @keyframes povecajMobilni {

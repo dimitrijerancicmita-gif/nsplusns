@@ -2,7 +2,7 @@ function Navigacija() {
   return (
     <>
       <div className="p-2 bg-[#00000088] flex items-center justify-between shadow-md fixed w-full z-50">
-        <img src="src\assets\logo.png" alt="logo" className="h-12 w-12 ml-2" />
+        <img src="src\assets\logo.png" alt="logo" className="h-12  w-12 ml-2" />
 
         <div className="flex gap-3 mr-4">
           <a href="#" className=" border-r-1 pr-3 text-white hover:scale-105 transition transform duration-200">
@@ -24,7 +24,7 @@ function Navigacija() {
         />
 
         <div className="absolute top-0 left-0 w-full h-full bg-black/40 flex flex-col items-center justify-center text-center px-4">
-           <img src="src\assets\logo.png" alt="logo" className="h-80 w-60 ml-2" />
+           <img src="src\assets\logo.png" alt="logo" className="h-110 w-75 ml-2 mb-[-70px]" />
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Profesionalni molersko-farbarski radovi
           </h2>
