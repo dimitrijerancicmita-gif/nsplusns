@@ -33,7 +33,7 @@ function ScrollToHash() {
 }
 
 function App() {
-  return (
+  return(
     <>
       <ScrollToTop />
       <Routes>
@@ -57,7 +57,7 @@ function App() {
         />
       </Routes>
     </>
-  );
+  )
 }
 
 export default App;
