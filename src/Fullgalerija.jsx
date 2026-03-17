@@ -75,7 +75,7 @@ function Fullgalerija() {
                             >
                                 <img
                                     src={src}
-                                    alt="Rad moleraj"
+                                    alt="Slika nije pronadjena"
                                     className="w-full h-full object-cover group-hover:scale-110 transition-all duration-700"
                                 />
                                 <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
