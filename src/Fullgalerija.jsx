@@ -2,40 +2,32 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 
+// --- MORAŠ IH UVOZITI OVAKO DA BI RADILO NA GITHUB/PRODUCTION ---
+import logo from './assets/logo.png';
+import m1 from './assets/molerajslika.jpeg';
+import m2 from './assets/slika1.jpeg';
+import m3 from './assets/treca.jpeg';
+import m4 from './assets/moleraj2.jpeg';
+import m5 from './assets/moleraj4.jpeg';
+import m6 from './assets/moleraj5.jpeg';
+import m7 from './assets/moleraj3.jpeg';
+import m8 from './assets/moleraj6.jpeg';
+
 function Fullgalerija() {
-    // State koji čuva putanju slike koja je trenutno otvorena
     const [selectedImg, setSelectedImg] = useState(null);
 
-    const molerajImages = [
-        "src/assets/molerajslika.jpeg",
-        "src/assets/slika1.jpeg",
-        "src/assets/treca.jpeg",
-        "src/assets/moleraj2.jpeg",
-        "src/assets/moleraj4.jpeg",
-        "src/assets/moleraj5.jpeg",
-        "src/assets/moleraj3.jpeg",
-        "src/assets/moleraj6.jpeg"
-    ];
-
-    const fasadeImages = [
-        "src/assets/molerajslika.jpeg", 
-        "src/assets/slika1.jpeg",
-        "src/assets/treca.jpeg",
-        "src/assets/moleraj2.jpeg",
-        "src/assets/moleraj4.jpeg",
-        "src/assets/moleraj5.jpeg",
-        "src/assets/moleraj3.jpeg",
-        "src/assets/moleraj6.jpeg"
-    ];
+    // Nizovi sada koriste uvezene varijable, a ne stringove
+    const molerajImages = [m1, m2, m3, m4, m5, m6, m7, m8];
+    const fasadeImages = [m1, m2, m3, m4, m5, m6, m7, m8]; 
 
     return (
         <div className="bg-black min-h-screen text-white font-['Inter'] selection:bg-white selection:text-black">
             
-            {/* --- FIXNI NAV --- */}
+            {/* --- NAV --- */}
             <nav className="fixed top-0 w-full z-[100] px-4 py-4">
                 <div className="max-w-[1800px] mx-auto flex items-center justify-between bg-black/80 backdrop-blur-xl border border-white/10 px-6 py-3">
                     <div className="flex items-center gap-3">
-                        <img src="src/assets/logo.png" alt="logo" className="h-8 w-auto brightness-200" />
+                        <img src={logo} alt="logo" className="h-8 w-auto brightness-200" />
                         <span className="font-['Archivo'] font-black text-white text-lg tracking-tighter uppercase italic hidden sm:block">
                             NS PLUS <span className="text-gray-500 not-italic font-light">NS</span>
                         </span>
@@ -50,10 +42,7 @@ function Fullgalerija() {
                 </div>
             </nav>
 
-            {/* --- GLAVNI SADRŽAJ --- */}
             <div className="pt-32 pb-20 px-6 max-w-[1600px] mx-auto">
-                
-                {/* Naslov Stranice */}
                 <motion.div 
                     initial={{ opacity: 0, x: -20 }}
                     animate={{ opacity: 1, x: 0 }}
@@ -81,7 +70,7 @@ function Fullgalerija() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.1 }}
-                                onClick={() => setSelectedImg(src)} // KLIK OTVARA SLIKU
+                                onClick={() => setSelectedImg(src)}
                                 className="group relative aspect-[4/5] overflow-hidden bg-gray-900 border border-white/5 cursor-pointer"
                             >
                                 <img
@@ -116,7 +105,7 @@ function Fullgalerija() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: index * 0.1 }}
-                                onClick={() => setSelectedImg(src)} // KLIK OTVARA SLIKU
+                                onClick={() => setSelectedImg(src)}
                                 className="group relative aspect-square overflow-hidden bg-gray-900 border border-white/5 cursor-pointer"
                             >
                                 <img
@@ -142,7 +131,7 @@ function Fullgalerija() {
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
-                        onClick={() => setSelectedImg(null)} // Zatvara se na klik bilo gde
+                        onClick={() => setSelectedImg(null)}
                         className="fixed inset-0 z-[200] bg-black/95 backdrop-blur-xl flex items-center justify-center p-4 cursor-zoom-out"
                     >
                         <motion.img 
@@ -154,13 +143,12 @@ function Fullgalerija() {
                             className="max-w-full max-h-[90vh] object-contain shadow-2xl border border-white/10"
                         />
                         <div className="absolute top-8 right-8 text-white/50 text-[10px] uppercase tracking-[0.3em] font-bold">
-                            Klikni bilo gde za zatvaranje
+                            Zatvori
                         </div>
                     </motion.div>
                 )}
             </AnimatePresence>
 
-            {/* --- FOOTER --- */}
             <footer className="py-12 border-t border-white/5 bg-[#050505] text-center">
                 <p className="text-[10px] font-black uppercase tracking-[0.5em] text-gray-700">
                     © NS PLUS NS — Smederevo 
