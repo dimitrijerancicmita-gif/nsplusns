@@ -6,7 +6,7 @@ import trecaSlika from "./assets/treca.jpeg";
 import cetvrtaSlika from "./assets/cetvrta.jpeg";
 
 const usluge = [
-  { id: "moleraj", naslov: "Moleraj", opis: "Vrhunski kvalitet završne obrade i osvežavanje vašeg kutka.", img: molerajSlika },
+  { id: "moleraj", naslov: "Moleraj", opis: "Vrhunski kvalitet završne obrade i osvežavanje vašeg prostora.", img: molerajSlika },
   { id: "fasade", naslov: "Fasade", opis: "Dugotrajna zaštita i moderna estetika vašeg eksterijera.", img: drugaSlika },
   { id: "unutrasnji", naslov: "Gletovanje", opis: "Precizna priprema zidova do savršeno glatke površine.", img: trecaSlika },
   { id: "dekorativni", naslov: "Dekoracije", opis: "Unikatne tehnike koje daju karakter svakom zidu.", img: cetvrtaSlika },
