@@ -1,7 +1,33 @@
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 function Fullgalerija() {
+    // State koji čuva putanju slike koja je trenutno otvorena
+    const [selectedImg, setSelectedImg] = useState(null);
+
+    const molerajImages = [
+        "src/assets/molerajslika.jpeg",
+        "src/assets/slika1.jpeg",
+        "src/assets/treca.jpeg",
+        "src/assets/moleraj2.jpeg",
+        "src/assets/moleraj4.jpeg",
+        "src/assets/moleraj5.jpeg",
+        "src/assets/moleraj3.jpeg",
+        "src/assets/moleraj6.jpeg"
+    ];
+
+    const fasadeImages = [
+        "src/assets/molerajslika.jpeg", 
+        "src/assets/slika1.jpeg",
+        "src/assets/treca.jpeg",
+        "src/assets/moleraj2.jpeg",
+        "src/assets/moleraj4.jpeg",
+        "src/assets/moleraj5.jpeg",
+        "src/assets/moleraj3.jpeg",
+        "src/assets/moleraj6.jpeg"
+    ];
+
     return (
         <div className="bg-black min-h-screen text-white font-['Inter'] selection:bg-white selection:text-black">
             
@@ -47,32 +73,23 @@ function Fullgalerija() {
                         <div className="h-[2px] flex-grow bg-white/10"></div>
                     </div>
 
-
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                        {[
-                            "src/assets/molerajslika.jpeg",
-                            "src/assets/slika1.jpeg",
-                            "src/assets/treca.jpeg",
-                            "src/assets/moleraj2.jpeg",
-                            "src/assets/moleraj4.jpeg",
-                            "src/assets/moleraj5.jpeg",
-                            "src/assets/moleraj3.jpeg",
-                            "src/assets/moleraj6.jpeg"
-                        ].map((src, index) => (
+                        {molerajImages.map((src, index) => (
                             <motion.div 
                                 key={index}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
                                 transition={{ delay: index * 0.1 }}
-                                className="group relative aspect-[4/5] overflow-hidden bg-gray-900 border border-white/5"
+                                onClick={() => setSelectedImg(src)} // KLIK OTVARA SLIKU
+                                className="group relative aspect-[4/5] overflow-hidden bg-gray-900 border border-white/5 cursor-pointer"
                             >
                                 <img
                                     src={src}
                                     alt="Rad moleraj"
-                                    className="w-full h-full object-cover group-hover:scale-110 transition-all duration-700 cursor-pointer"
+                                    className="w-full h-full object-cover group-hover:scale-110 transition-all duration-700"
                                 />
-                                {/* Overlay sa tekstom na hover */}
-                                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+                                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                                     <span className="text-white text-[10px] font-black uppercase tracking-widest border border-white px-4 py-2 bg-black/20 backdrop-blur-sm">
                                         Pregledaj
                                     </span>
@@ -91,31 +108,23 @@ function Fullgalerija() {
                         <div className="h-[2px] flex-grow bg-white/10"></div>
                     </div>
 
-
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                        {[
-                            "src/assets/molerajslika.jpeg", 
-                            "src/assets/slika1.jpeg",
-                            "src/assets/treca.jpeg",
-                            "src/assets/moleraj2.jpeg",
-                            "src/assets/moleraj4.jpeg",
-                            "src/assets/moleraj5.jpeg",
-                            "src/assets/moleraj3.jpeg",
-                            "src/assets/moleraj6.jpeg"
-                        ].map((src, index) => (
+                        {fasadeImages.map((src, index) => (
                             <motion.div 
                                 key={index}
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
                                 transition={{ delay: index * 0.1 }}
-                                className="group relative aspect-square overflow-hidden bg-gray-900 border border-white/5"
+                                onClick={() => setSelectedImg(src)} // KLIK OTVARA SLIKU
+                                className="group relative aspect-square overflow-hidden bg-gray-900 border border-white/5 cursor-pointer"
                             >
                                 <img
                                     src={src}
                                     alt="Rad fasada"
-                                    className="w-full h-full object-cover group-hover:scale-110 transition-all duration-700 cursor-pointer"
+                                    className="w-full h-full object-cover group-hover:scale-110 transition-all duration-700"
                                 />
-                                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+                                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                                     <span className="text-white text-[10px] font-black uppercase tracking-widest border border-white px-4 py-2 bg-black/20 backdrop-blur-sm">
                                         Pregledaj
                                     </span>
@@ -124,8 +133,32 @@ function Fullgalerija() {
                         ))}
                     </div>
                 </section>
-
             </div>
+
+            {/* --- LIGHTBOX (MODAL) --- */}
+            <AnimatePresence>
+                {selectedImg && (
+                    <motion.div 
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        onClick={() => setSelectedImg(null)} // Zatvara se na klik bilo gde
+                        className="fixed inset-0 z-[200] bg-black/95 backdrop-blur-xl flex items-center justify-center p-4 cursor-zoom-out"
+                    >
+                        <motion.img 
+                            initial={{ scale: 0.8, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            exit={{ scale: 0.8, opacity: 0 }}
+                            src={selectedImg} 
+                            alt="Uvećan prikaz" 
+                            className="max-w-full max-h-[90vh] object-contain shadow-2xl border border-white/10"
+                        />
+                        <div className="absolute top-8 right-8 text-white/50 text-[10px] uppercase tracking-[0.3em] font-bold">
+                            Klikni bilo gde za zatvaranje
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
 
             {/* --- FOOTER --- */}
             <footer className="py-12 border-t border-white/5 bg-[#050505] text-center">

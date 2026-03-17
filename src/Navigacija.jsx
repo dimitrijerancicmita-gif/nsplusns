@@ -1,14 +1,27 @@
 import { motion } from "framer-motion";
 
+import logoImg from "./assets/logo.png";
+import heroImg from "./assets/hero2.avif";
+
 function Navigacija() {
+  // Sada koristimo uvezene objekte umesto stringova
+  const assets = {
+    logo: logoImg,
+    hero: heroImg
+  };
+
   return (
     <>
-      {/* --- NAV BAR --- */}
+      {/* --- NAVIGACIJA --- */}
       <nav className="fixed top-0 w-full z-[100] px-4 md:px-6 py-4">
         <div className="max-w-[1800px] mx-auto flex items-center justify-between bg-black/40 backdrop-blur-xl border border-white/10 px-4 md:px-6 py-3 rounded-sm">
           
           <div className="flex items-center gap-3 md:gap-4">
-            <img src="src/assets/logo.png" alt="logo" className="h-8 md:h-10 w-auto grayscale brightness-200" />
+            <img 
+              src={assets.logo} 
+              alt="logo" 
+              className="h-8 md:h-10 w-auto grayscale brightness-200" 
+            />
             <span className="font-['Archivo'] font-black text-white text-lg md:text-xl tracking-tighter uppercase italic hidden sm:block">
               NS PLUS <span className="text-gray-500 not-italic font-light">NS</span>
             </span>
@@ -32,7 +45,7 @@ function Navigacija() {
       <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden font-['Inter'] bg-black pb-10">
         <img
           className="absolute top-0 left-0 w-full h-full object-cover opacity-60 grayscale-[0.3]"
-          src="public\galerija\hero2.avif"
+          src={assets.hero}
           alt="Hero background"
         />
         
@@ -47,7 +60,7 @@ function Navigacija() {
             className="w-full flex justify-center"
           >
             <img 
-              src="public\galerija\logo.png"
+              src={assets.logo}
               alt="logo central" 
               className="h-auto w-[60%] max-w-[300px] md:max-w-[450px] mb-[-30px] md:mb-[-40px] drop-shadow-[0_0_30px_rgba(255,255,255,0.1)] grayscale brightness-110" 
             />
@@ -88,9 +101,6 @@ function Navigacija() {
               <div className="absolute inset-0 bg-white translate-y-full group-hover:translate-y-0 transition-transform duration-500"></div>
             </button>
           </motion.a>
-        </div>
-
-        <div className="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 md:gap-4 opacity-30">
         </div>
       </section>
     </>
