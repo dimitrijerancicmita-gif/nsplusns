@@ -4,21 +4,30 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 // --- MORAŠ IH UVOZITI OVAKO DA BI RADILO NA GITHUB/PRODUCTION ---
 import logo from './assets/logo.png';
-import m1 from './assets/molerajslika.jpeg';
-import m2 from './assets/slika1.jpeg';
-import m3 from './assets/treca.jpeg';
-import m4 from './assets/moleraj2.jpeg';
-import m5 from './assets/moleraj4.jpeg';
-import m6 from './assets/moleraj5.jpeg';
-import m7 from './assets/moleraj3.jpeg';
-import m8 from './assets/moleraj6.jpeg';
+import m1 from './assets/moleraj-slike/molerajslika.jpeg';
+import m2 from './assets/moleraj-slike/moleraj6.jpg';
+import m3 from './assets/moleraj-slike/moleraj3.jpg';
+import m4 from './assets/moleraj-slike/slika1.jpeg';
+import m5 from './assets/moleraj-slike/moleraj7.jpg';
+import m6 from './assets/moleraj-slike/moleraj4.jpeg';
+import m7 from './assets/moleraj-slike/moleraj2.jpg';
+import m8 from './assets/moleraj-slike/moleraj5.jpeg';
+
+import f1 from './assets/fasade-slike/fasade1.jpg';
+import f2 from './assets/fasade-slike/fasade2.jpg';
+import f3 from './assets/fasade-slike/slika3.jpeg';
+import f4 from './assets/fasade-slike/fasade5.jpg';
+import f5 from './assets/fasade-slike/fasade6.jpg';
+import f6 from './assets/fasade-slike/fasade7.jpg';
+import f7 from './assets/fasade-slike/fasade8.jpg';
+import f8 from './assets/posle.jpeg';
 
 function Fullgalerija() {
     const [selectedImg, setSelectedImg] = useState(null);
 
     // Nizovi sada koriste uvezene varijable, a ne stringove
     const molerajImages = [m1, m2, m3, m4, m5, m6, m7, m8];
-    const fasadeImages = [m1, m2, m3, m4, m5, m6, m7, m8]; 
+    const fasadeImages = [f1, f2, f3, f4, f5, f6, f7, f8]; 
 
     return (
         <div className="bg-black min-h-screen text-white font-['Inter'] selection:bg-white selection:text-black">
@@ -62,7 +71,7 @@ function Fullgalerija() {
                         <div className="h-[2px] flex-grow bg-white/10"></div>
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                         {molerajImages.map((src, index) => (
                             <motion.div 
                                 key={index}

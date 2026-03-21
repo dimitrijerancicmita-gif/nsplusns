@@ -5,9 +5,8 @@ import { motion } from "framer-motion";
 // --- Importi slika ostaju isti ---
 import preSlika from "./assets/pre.jpeg";
 import posleSlika from "./assets/posle.jpeg";
-import slika1 from "./assets/slika1.jpeg";
-import slika2 from "./assets/slika2.jpeg";
-import slika3 from "./assets/slika3.jpeg";
+import slika1 from "./assets/moleraj-slike/slika1.jpeg";
+import slika2 from "./assets/moleraj-slike/moleraj6.jpg";
 
 function Galerija() {
   const [sliderPos, setSliderPos] = useState(50);

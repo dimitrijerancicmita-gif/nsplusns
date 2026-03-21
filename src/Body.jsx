@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion"; 
-import molerajSlika from "./assets/molerajslika.jpeg";
-import drugaSlika from "./assets/druga.jpeg";
-import trecaSlika from "./assets/treca.jpeg";
-import cetvrtaSlika from "./assets/cetvrta.jpeg";
+import molerajSlika from "./assets/moleraj-slike/molerajslika.jpeg";
+import drugaSlika from "./assets/posle.jpeg";
+import trecaSlika from "./assets/moleraj-slike/moleraj7.jpg";
+import cetvrtaSlika from "./assets/dekoracije-slike/cetvrta.jpeg";
 
 const usluge = [
   { id: "moleraj", naslov: "Moleraj", opis: "Vrhunski kvalitet završne obrade i osvežavanje vašeg prostora.", img: molerajSlika },
