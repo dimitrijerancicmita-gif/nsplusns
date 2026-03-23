@@ -1,13 +1,14 @@
-import { Routes, Route, useLocation } from "react-router-dom"; // <--- dodaj useLocation
-import { useEffect } from "react"; // <--- dodaj useEffect
+import { Routes, Route, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import Body from "./Body.jsx";
 import Galerija from "./Galerija.jsx";
 import Onama from "./Onama.jsx";
 import Fullgalerija from "./Fullgalerija.jsx";
+import Onamafull from "./Onamafull.jsx"; // <--- Importuj novu stranicu
 import Navigacija from './Navigacija.jsx';
 import Footer from "./Footer.jsx";
 
-// ScrollToTop komponenta
+// ScrollToTop komponenta (uvek baca na vrh kad se promeni ruta)
 function ScrollToTop() {
   const { pathname } = useLocation();
 
@@ -18,7 +19,7 @@ function ScrollToTop() {
   return null;
 }
 
-// ScrollToHash komponenta
+// ScrollToHash komponenta (za smooth scroll ka ID-u na istoj stranici)
 function ScrollToHash() {
   const { hash } = useLocation();
 
@@ -33,31 +34,39 @@ function ScrollToHash() {
 }
 
 function App() {
-  return(
+  return (
     <>
       <ScrollToTop />
       <Routes>
+        {/* POČETNA STRANICA */}
         <Route
           path="/"
           element={
             <>
               <ScrollToHash />
-              <Navigacija/>
+              <Navigacija />
               <Body />
               <Galerija />
               <Onama />
-              <Footer/>
+              <Footer />
             </>
           }
         />
 
+        {/* STRANICA FULL GALERIJA */}
         <Route
           path="/fullgalerija"
           element={<Fullgalerija />}
         />
+        
+        {/* STRANICA O NAMA FULL */}
+        <Route
+          path="/Onamafull"
+          element={<Onamafull />}
+        />
       </Routes>
     </>
-  )
+  );
 }
 
 export default App;
