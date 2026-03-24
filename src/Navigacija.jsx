@@ -72,7 +72,8 @@ function Navigacija() {
             transition={{ delay: 0.5, duration: 0.8 }}
             className="font-['Archivo'] text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-black text-white mb-6 uppercase tracking-tighter leading-[1.1] md:leading-none w-full max-w-5xl"
           >
-            <span className="text-gray-400 italic font-light block md:inline mr-5">molersko-farbarsko</span> radovi
+            <span className="text-white italic font-light block md:inline mr-5">molersko-fasaderski</span> 
+            <span className="text-gray-400 italic font-light block md:inline mr-5">radovi</span>
           </motion.h2>
 
           <div className="w-16 md:w-24 h-[2px] bg-white/30 mb-6 md:mb-8"></div>

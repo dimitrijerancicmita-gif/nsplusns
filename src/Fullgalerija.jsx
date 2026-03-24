@@ -11,9 +11,16 @@ import m2 from './assets/moleraj-slike/moleraj6.jpg';
 import m3 from './assets/moleraj-slike/moleraj3.jpg';
 import m4 from './assets/moleraj-slike/slika1.jpeg';
 import m5 from './assets/moleraj-slike/moleraj7.jpg';
-import m6 from './assets/moleraj-slike/moleraj4.jpeg';
-import m7 from './assets/moleraj-slike/moleraj2.jpg';
+import m6 from './assets/moleraj-slike/moleraj12.jpg';
+import m7 from './assets/moleraj-slike/moleraj13.jpg';
 import m8 from './assets/moleraj-slike/moleraj5.jpeg';
+import m9 from './assets/moleraj-slike/moleraj8.jpg';
+import m10 from './assets/moleraj-slike/moleraj9.jpg';
+import m11 from './assets/moleraj-slike/moleraj10.jpg';
+import m12 from './assets/moleraj-slike/moleraj11.jpg';
+
+
+
 
 // Fasade
 import f1 from './assets/fasade-slike/fasade1.jpg';
@@ -23,6 +30,12 @@ import f4 from './assets/fasade-slike/fasade5.jpg';
 import f5 from './assets/fasade-slike/fasade6.jpg';
 import f6 from './assets/fasade-slike/fasade7.jpg';
 import f7 from './assets/fasade-slike/fasade8.jpg';
+import f8a from './assets/fasade-slike/fasade9.jpg';
+import f9a from './assets/fasade-slike/fasade10.jpg';
+import f10a from './assets/fasade-slike/fasade13.jpg';
+import f11a from './assets/fasade-slike/fasade11.jpg';
+import f12a from './assets/fasade-slike/fasade12.jpg';
+
 
 // Pre/Posle
 import f8 from './assets/posle.jpeg';
@@ -58,8 +71,8 @@ function Fullgalerija() {
     setSliderPos(prev => prev.map((p, i) => (i === index ? pos : p)));
   };
 
-  const molerajImages = [m1, m2, m3, m4, m5, m6, m7, m8];
-  const fasadeImages = [f1, f2, f3, f4, f5, f6, f7, f8];
+  const molerajImages = [m1, m2, m3, m4, m5, m6, m7, m8, m9, m10, m11, m12];
+  const fasadeImages = [f1, f2, f3, f4, f5, f6, f7, f8a, f9a, f12a, f10a, f11a];
 
   return (
     <div className="bg-[#050505] min-h-screen text-white font-['Inter'] selection:bg-white selection:text-black overflow-x-hidden">
@@ -68,7 +81,11 @@ function Fullgalerija() {
       <nav className="fixed top-8 left-1/2 -translate-x-1/2 z-[110] w-[90%] max-w-[1400px]">
         <div className="bg-black/40 backdrop-blur-2xl border border-white/10 rounded-2xl px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <img src={logo} alt="logo" className="h-6 invert opacity-90" />
+            <img 
+              src={logo} 
+              alt="logo" 
+              className="h-8 w-10 object-cover object-center invert opacity-90 rounded"
+            />
             <span className="font-black italic text-sm tracking-tighter uppercase hidden sm:block">NS PLUS NS</span>
           </div>
           <Link to="/" className="text-[10px] font-bold border border-white px-5 py-2 uppercase tracking-widest hover:bg-white hover:text-black transition-all duration-500">

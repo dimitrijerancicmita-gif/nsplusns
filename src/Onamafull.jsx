@@ -23,7 +23,7 @@ const Onamafull = () => {
     <div className="min-h-screen bg-[#0d0d0d] text-white selection:bg-white selection:text-black font-['Inter'] overflow-x-hidden">
       
       {/* --- HERO SECTION --- */}
-      <section className="relative h-screen flex items-end px-6 pb-20 overflow-hidden">
+      <section className="relative h-screen flex items-end px-6 pb-20 overflow-hidden ">
         <motion.div 
           initial={{ scale: 1.2 }}
           animate={{ scale: 1 }}
@@ -34,15 +34,18 @@ const Onamafull = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-[#0d0d0d] via-transparent to-transparent" />
         </motion.div>
 
-        <div className="relative z-10 max-w-7xl mx-auto w-full">
+        <div className="relative z-10 max-w-7xl mx-auto w-full ">
           <motion.h1 
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             className="text-[15vw] md:text-[12rem] font-black uppercase leading-[0.8] tracking-tighter"
           >
-            Naša <br />
+            <span className="relative -top-4 md:-top-6">
+              Naša
+            </span>
+            <br />
             <span className="text-[15vw] md:text-[12rem] font-black text-[#cccc] uppercase leading-[0.8] tracking-tighter">
-              Prica.
+              Priča.
             </span>
           </motion.h1>
         </div>
@@ -57,9 +60,10 @@ const Onamafull = () => {
               Tri decenije <span className="text-zinc-500">prenošenja znanja</span> sa kolena na koleno.
             </h2>
             <p className="text-zinc-400 text-lg leading-relaxed font-light">
-              Od prvih građevinskih poduhvata u Smederevu, naše ime postalo je sinonim za stabilnost. 
-              Znanje, posvećenost i profesionalizam prenosili su se generacijama, negujući poštenje 
-              u radu i nepokolebljiv kvalitet.
+              Naša priča počinje kao porodični posao koji je s vremenom prerastao u ozbiljan i pouzdan brend. 
+              Firma je preuzeta od oca, uz veliku odgovornost i želju da se očuva kvalitet rada, ali i unapredi 
+              kroz savremen pristup i nove ideje. Danas stojimo iza svakog projekta sa istom posvećenošću, 
+              gradeći poverenje kroz rad, trud i rezultate.
             </p>
           </motion.div>
           

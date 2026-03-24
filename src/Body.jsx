@@ -2,13 +2,11 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion"; 
 import molerajSlika from "./assets/moleraj-slike/molerajslika.jpeg";
 import drugaSlika from "./assets/posle.jpeg";
-import trecaSlika from "./assets/moleraj-slike/moleraj7.jpg";
 import cetvrtaSlika from "./assets/dekoracije-slike/cetvrta.jpeg";
 
 const usluge = [
   { id: "moleraj", naslov: "Moleraj", opis: "Vrhunski kvalitet završne obrade i osvežavanje vašeg prostora.", img: molerajSlika },
   { id: "fasade", naslov: "Fasade", opis: "Dugotrajna zaštita i moderna estetika vašeg eksterijera.", img: drugaSlika },
-  { id: "unutrasnji", naslov: "Gletovanje", opis: "Precizna priprema zidova do savršeno glatke površine.", img: trecaSlika },
   { id: "dekorativni", naslov: "Dekoracije", opis: "Unikatne tehnike koje daju karakter svakom zidu.", img: cetvrtaSlika },
 ];
 
@@ -41,7 +39,7 @@ function Body() {
         </div>
 
         {/* Grid sa masivnim karticama */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 xl:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 xl:gap-6">
           {usluge.map((usluga, index) => (
             <motion.div
               key={usluga.id}
