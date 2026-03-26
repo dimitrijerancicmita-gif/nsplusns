@@ -57,7 +57,7 @@ const Onamafull = () => {
           <motion.div {...fadeInUp} className="md:col-span-5">
             <p className="text-zinc-500 uppercase tracking-[0.4em] text-xs font-bold mb-6">/ 01 Tradicija</p>
             <h2 className="text-4xl md:text-5xl font-light mb-8 leading-tight">
-              Tri decenije <span className="text-zinc-500">prenošenja znanja</span> sa kolena na koleno.
+              Pet decenija <span className="text-zinc-500">prenošenja znanja</span> sa kolena na koleno.
             </h2>
             <p className="text-zinc-400 text-lg leading-relaxed font-light">
               Naša priča počinje kao porodični posao koji je s vremenom prerastao u ozbiljan i pouzdan brend. 
@@ -88,7 +88,7 @@ const Onamafull = () => {
         />
         <motion.div {...fadeInUp} className="relative z-10 max-w-4xl px-6 text-center">
           <blockquote className="text-3xl md:text-6xl italic font-light leading-tight">
-            "Svaki potez četkom nosi težinu porodičnog ugleda koji čuvamo punih trideset godina."
+            "Svaki potez četkom nosi težinu porodičnog ugleda koji čuvamo preko pedeset godina."
           </blockquote>
         </motion.div>
       </section>

@@ -31,9 +31,9 @@ function Onama() {
             </h2>
 
             <div className="flex items-center gap-6 mb-10">
-                <span className="text-6xl md:text-8xl font-black text-white/5 tracking-tighter">30+</span>
+                <span className="text-6xl md:text-8xl font-black text-white/5 tracking-tighter">50+</span>
                 <p className="text-gray-400 text-lg leading-relaxed max-w-md font-light">
-                  Tri decenije prenošenja znanja sa kolena na koleno. Od prvih građevinskih firmi u Smederevu.
+                  pet decenija prenošenja znanja sa kolena na koleno. Od prvih građevinskih firmi u Smederevu.
                 </p>
             </div>
 
@@ -69,7 +69,7 @@ function Onama() {
             </h2>
 
             <p className="text-gray-300 text-lg leading-relaxed mb-12 font-light">
-              Pored klasičnih molersko-fasadnih radova, specijalizovani smo za 
+              Pored klasičnih molersko-fasaderskih radova, specijalizovani smo za 
               širok spektar dekorativnih tehnika koje vašem prostoru daju 
               unikatan karakter. Naš cilj nije samo farbanje, već stvaranje 
               atmosfere u kojoj uživate.

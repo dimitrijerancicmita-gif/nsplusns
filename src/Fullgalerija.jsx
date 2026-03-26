@@ -8,17 +8,22 @@ import logo from './assets/logo.png';
 // Moleraj
 import m1 from './assets/moleraj-slike/molerajslika.jpeg';
 import m2 from './assets/moleraj-slike/moleraj6.jpg';
-import m3 from './assets/moleraj-slike/moleraj3.jpg';
 import m4 from './assets/moleraj-slike/slika1.jpeg';
 import m5 from './assets/moleraj-slike/moleraj7.jpg';
-import m6 from './assets/moleraj-slike/moleraj12.jpg';
-import m7 from './assets/moleraj-slike/moleraj13.jpg';
 import m8 from './assets/moleraj-slike/moleraj5.jpeg';
 import m9 from './assets/moleraj-slike/moleraj8.jpg';
-import m10 from './assets/moleraj-slike/moleraj9.jpg';
-import m11 from './assets/moleraj-slike/moleraj10.jpg';
-import m12 from './assets/moleraj-slike/moleraj11.jpg';
+import m7 from './assets/moleraj-slike/moleraj13.jpg';
 
+
+
+//dekoracije
+import d10 from './assets/moleraj-slike/moleraj9.jpg';
+import d11 from './assets/moleraj-slike/moleraj10.jpg';
+import d12 from './assets/moleraj-slike/moleraj11.jpg';
+import d6 from './assets/moleraj-slike/moleraj12.jpg';
+import d14 from './assets/dekoracije-slike/cetvrta.jpeg';
+import d15 from './assets/dekoracije-slike/slika2.jpeg';
+import d3 from './assets/moleraj-slike/moleraj3.jpg';
 
 
 
@@ -71,8 +76,9 @@ function Fullgalerija() {
     setSliderPos(prev => prev.map((p, i) => (i === index ? pos : p)));
   };
 
-  const molerajImages = [m1, m2, m3, m4, m5, m6, m7, m8, m9, m10, m11, m12];
-  const fasadeImages = [f1, f2, f3, f4, f5, f6, f7, f8a, f9a, f12a, f10a, f11a];
+  const molerajImages = [m1, m2, m4, m5, m7, m8, m9];
+  const fasadeImages = [f1, f3, f11a, f2, f4, f12a, f5, f10a, f6, f7, f8a, f9a];
+  const dekoracijeImages = [d10, d11, d12, d6, d3, d14, d15];
 
   return (
     <div className="bg-[#050505] min-h-screen text-white font-['Inter'] selection:bg-white selection:text-black overflow-x-hidden">
@@ -159,6 +165,22 @@ function Fullgalerija() {
            ))}
         </div>
       </section>
+
+      {/* dekoracije GALLERY - FIXED GRID (2 mobile, 4 desktop) */}
+      <section className="px-6 max-w-[1600px] mx-auto mb-60">
+        <div className="flex items-end justify-between mb-20 border-b border-white/10 pb-10">
+            <div>
+                <p className="text-neutral-500 text-[10px] uppercase tracking-[0.5em] mb-2">04 / Enterijer</p>
+                <h2 className="text-6xl md:text-8xl font-black uppercase italic tracking-tighter">Dekoracije</h2>
+            </div>
+        </div>
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+           {dekoracijeImages.map((img, i) => (
+             <GalleryItem key={i} src={img} onClick={() => setSelectedImg(img)} />
+           ))}
+        </div>
+      </section>
+
 
 
       {/* MODAL */}
