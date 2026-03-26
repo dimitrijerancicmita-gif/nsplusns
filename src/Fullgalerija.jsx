@@ -13,6 +13,7 @@ import m5 from './assets/moleraj-slike/moleraj7.jpg';
 import m8 from './assets/moleraj-slike/moleraj5.jpeg';
 import m9 from './assets/moleraj-slike/moleraj8.jpg';
 import m7 from './assets/moleraj-slike/moleraj13.jpg';
+import m10 from './assets/moleraj-slike/moleraj14.jpg';
 
 
 
@@ -24,6 +25,9 @@ import d6 from './assets/moleraj-slike/moleraj12.jpg';
 import d14 from './assets/dekoracije-slike/cetvrta.jpeg';
 import d15 from './assets/dekoracije-slike/slika2.jpeg';
 import d3 from './assets/moleraj-slike/moleraj3.jpg';
+import d16 from './assets/dekoracije-slike/dekoracije1.jpg';
+
+
 
 
 
@@ -76,9 +80,9 @@ function Fullgalerija() {
     setSliderPos(prev => prev.map((p, i) => (i === index ? pos : p)));
   };
 
-  const molerajImages = [m1, m2, m4, m5, m7, m8, m9];
+  const molerajImages = [m1, m2, m4, m5, m7, m8, m9, m10 ];
   const fasadeImages = [f1, f3, f11a, f2, f4, f12a, f5, f10a, f6, f7, f8a, f9a];
-  const dekoracijeImages = [d10, d11, d12, d6, d3, d14, d15];
+  const dekoracijeImages = [d10, d11, d12, d6, d3, d14, d15, d16];
 
   return (
     <div className="bg-[#050505] min-h-screen text-white font-['Inter'] selection:bg-white selection:text-black overflow-x-hidden">
